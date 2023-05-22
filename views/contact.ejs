@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+          document.getElementById("contactForm").submit();
+        }
+      </script>
+</script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <p>RAJWADI</p>
+        </div>
+        <div class="list">
+            <ul>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="/about">About</a></li>
+                <li> <a href="#">Services</a></li>
+                <li> <a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="contact">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <form action="/contact" method="post" id="contactForm">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="email" placeholder="Gmail" name="mail" required>
+                <textarea name="message" cols="30" rows="10" placeholder="Message" required></textarea>
+                <!-- <div class="g-recaptcha" data-sitekey="6LfNEysmAAAAADUqNltsNKXgGWVj81IsnnXsujvQ"></div> -->
+                <button class="g-recaptcha" data-sitekey="6Lf5DismAAAAAJR83szpMARgLXX-luJQN2i2qWXx" data-callback='onSubmit' data-action='submit'>Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="foot">
+            <div class="address">
+                <h4>ADDRESS:</h4>
+                <p>Dudhi by pass,<br> lodhipura, Dhamnod,<br> Madhya Pradesh 454552.</p>
+            </div>
+            <div class="contact">
+                <h4>CONTACT:</h4>
+                <p>Mobile &nbsp89461-76190<br> Gmail &nbsp&nbsp pragyan1234@gmail.com<br></p>
+            </div>
+            <div class="weather">
+                <h4>WEATHER</h4>
+                <p>Temp <%=weatherData.main.temp %>&deg; C</p>
+                <p><%= weatherData.weather[0].description %></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

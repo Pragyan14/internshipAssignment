@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <p>RAJWADI</p>
+        </div>
+        <div class="list">
+            <ul>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="/about">About</a></li>
+                <li> <a href="#">Services</a></li>
+                <li> <a href="/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="container">
+            <div class="text">
+                <h1>About Us</h1>
+                <p>Opened in 2015, Rajwadi is a restaurant designed around the farmer’s haul, featuring a menu that changes daily with a focus on seasonal and local cuisine. Heirloom grains are milled fresh for house made pastas, breads, and desserts, whole animal butchery is done on site, and an extensive in house fermentation program captures flavors at their peak and preserves them for the off season. Rajwadi is a carbon neutral restaurant. We work with Zero FoodPrint to help offset our carbon emissions.</p>
+            </div>
+            <div class="image">
+                <img src="images/aboutus.jpg" alt="no-img">
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="foot">
+            <div class="address">
+                <h4>ADDRESS:</h4>
+                <p>Dudhi by pass,<br> lodhipura, Dhamnod,<br> Madhya Pradesh 454552.</p>
+            </div>
+            <div class="contact">
+                <h4>CONTACT:</h4>
+                <p>Mobile &nbsp89461-76190<br> Gmail &nbsp&nbsp pragyan1234@gmail.com<br></p>
+            </div>
+            <div class="weather">
+                <h4>WEATHER</h4>
+                <p>Temp <%=weatherData.main.temp %>&deg; C</p>
+                <p><%= weatherData.weather[0].description %></p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
