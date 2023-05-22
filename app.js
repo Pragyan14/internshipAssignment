@@ -19,7 +19,7 @@ app.set("view engine", "ejs");
 app.use(bodyparser.urlencoded({ extended: true }));
 
 let weatherData;
-const url = "https://api.openweathermap.org/data/2.5/weather?q=dhamnod&units=metric&appid=65ed6d0afca34c7e9d4f8359067ee7a2"
+const url = "https://api.openweathermap.org/data/2.5/weather?q=dhamnod&units=metric&appid=[API KEY]"
 https.get(url,function(response){
 response.on("data",function(data){
 weatherData = JSON.parse(data);
