@@ -1,7 +1,1 @@
-const uri = "https://api.unsplash.com/photos/?client_id=OpUMve4yzpWzSHGt7t8yyaLdVGwec5vIVjwEEn2VQEU"
-https.get(uri,function(response){
-    response.on("data",function(data){
-        const imgdata = JSON.parse(data);
-        // console.log(imgdata[0]);
-        })
-  })
+
